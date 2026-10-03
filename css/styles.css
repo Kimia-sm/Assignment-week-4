@@ -1,0 +1,168 @@
+/* MTM1544 Week 1: your stylesheet.
+   This file is already linked from index.html. Write your rules below.
+   Start by changing the body background colour and saving, to confirm the link works. */
+/* Set for all pages */
+* {
+  box-sizing: border-box;
+}
+   body {
+   font-family: Arial, sans-serif;
+}
+/* Main heading styles */
+   h1{
+   color: rgb(46, 46, 124);
+}
+
+
+/* main subheading styles */
+
+/* Specificity experiment:
+   Prediction: The ID selector will win because it has higher
+   specificity than the class selector and the element selector. */
+h2{
+   color: rgb(132, 33, 225);
+}
+.section-title {
+  color: green;
+}
+
+#summit {
+  color: red;
+}
+
+/*All three class selectors have the same specificity.
+   The last rule wins because of source order.
+   This is easier to understand than mixing element, class, and ID selectors.s*/ 
+
+.test-one {
+  color: blue;
+}
+
+.test-two {
+  color: green;
+}
+
+.test-three {
+  color: purple;
+}
+
+/* main paragraph styles */
+p{
+   font-size: 16px;
+   color: rgb(47, 47, 47);
+   text-align: center;
+   line-height: 1.5;
+
+}
+/* Introduction styles */
+.intro{
+   font-style: italic;
+   font-size: 18px;
+   color: rgb(0, 0, 0);
+}
+/* id styles */
+#summit{
+   font-size: 36px;
+}
+/* heading and subheading styles */
+h1 , h2{
+   text-align: center;
+}
+/* cascade rules */
+p {
+    color: darkgreen;
+}
+/* div styles */
+.card {
+   background-color: rgb(182, 191, 255);
+   border: 2px solid rgb(63, 75, 166);
+   border-radius: 10px;
+   padding: 20px;
+   margin-bottom: 20px;
+   width: 600px;
+   margin-left: auto;
+   margin-right: auto;
+}
+.paragraph-one {
+   margin-top: 10px;  
+}
+
+.paragraph-two {
+   margin-bottom: 80px;  
+}
+
+a:hover, a:focus{
+  color: rgb(85, 85, 140);
+  text-decoration: underline;
+}
+
+
+button {
+  color: white;
+  background-color: rgb(85, 85, 140);
+  padding: 1em;
+  font-size: 1.25rem;
+  border-radius: 10px;
+  border: 1.5px solid rgb(51, 62, 72);
+  cursor: pointer;
+}
+
+/* The arrow is decorative only.
+   It does not add important information, and the button still
+   makes sense without it. */
+button::before {
+  content: "➜";
+  margin-right: 8px;
+}
+button:hover, button:focus {
+  color: rgb(85, 85, 140);
+  background-color: white;
+  border: 2px solid rgb(85, 85, 140);
+  /* width: 100%; */
+  transition: all 0.5s;
+}
+ul li:first-child{
+  font-size: 20px;
+  padding: 20px;
+}
+li:last-child{
+  background-color: pink;
+  padding: 20px;
+  font-size: 20px;
+}
+ul li:nth-child(3){
+  padding: 20px;
+  font-size: 20px;
+}
+
+ul li:nth-child(2){
+  background-color: rgb(0, 255, 89);
+  padding: 20px;
+  font-size: 20px;
+}
+ul li:nth-child(4){
+  background-color: rgb(97, 165, 214);
+  padding: 20px;
+  font-size: 20px;
+}
+
+ul li:nth-child(5){
+  padding: 20px;
+  font-size: 20px;
+}
+
+ul li:nth-child(odd) {
+  background-color: rgb(240, 240, 240);
+}
+
+ul li:nth-child(even){
+  color: rgb(29, 7, 90);
+  padding: 20px;
+  font-size: 20px;
+}
+ul li:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+:where(h3,h4) {
+  color: rgb(198, 2, 143);
+}
